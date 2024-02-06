@@ -38,7 +38,7 @@ const server = http.createServer((req, res) => {
         res.writeHead(200, {'Content-Type': 'text/plain'});
         res.write('This is Contact Page');
         res.end();
-    } else if (url === '/file-write' && method === 'GET') {
+    } else if (url === '/file-write') {
         fs.writeFile('demo.txt', 'hello world', (err) => {
             if (err) {
                 res.writeHead(500, {'Content-Type': 'text/plain'});
